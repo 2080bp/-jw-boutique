@@ -90,7 +90,7 @@ const products = [
   },
 ];
 
-const categories = ["Todos", "Mini Mochilas", "Puffer", "Cuero PU", "Urbana", "Premium", "Moda", "Peluche"];
+const categories = ["Todos", "Mini Mochilas", "Cuero PU", "Urbana", "Moda", "Peluche"];
 
 const fmt = (n) => n.toLocaleString("es-CL");
 
