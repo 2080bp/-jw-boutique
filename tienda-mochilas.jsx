@@ -145,7 +145,7 @@ function ProductCard({ p, onOrder }) {
         }}
       >
         <img
-          src={`/public/${p.image}`}
+          src={`${import.meta.env.BASE_URL}${p.image}`}
           alt={p.name}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
