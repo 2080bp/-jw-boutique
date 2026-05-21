@@ -473,7 +473,7 @@
         const filtered = cat === "Todos" ? products : products.filter((p) => p.category === cat);
 
         const handleOrder = (product, color) => {
-          const msg = `Hola! Quiero pedir:\n🎒 *${product.name}*\n🎨 Color: ${color}\n💰 Precio: $${fmt(product.price)}\n📦 Entrega: 2 días hábiles\n\n¿Está disponible?`;
+          const msg = `Hola! Quiero pedir:\n🎒 *${product.name}*\n🎨 Color: ${color}\n💰 Precio: $${fmt(product.price)}\n📍 Entrega: solo Santiago\n💳 Abono 50% · saldo contra entrega\n\n¿Está disponible?`;
           const wa = `https://wa.me/56958537599?text=${encodeURIComponent(msg)}`;
           window.open(wa, "_blank");
           setToast(`¡Pedido de ${product.name} enviado!`);
@@ -546,7 +546,7 @@
                         ENTREGA
                       </p>
                       <p style={{ fontSize: "12px", color: "#7DEFA0", margin: 0, fontWeight: "600" }}>
-                        2 días hábiles
+                        Solo Santiago
                       </p>
                     </div>
                   )}
@@ -627,10 +627,10 @@
                     de tendencia
                   </h2>
                   <p style={{ color: "#FFD6B0", fontSize: "13px", margin: "0 0 20px 0" }}>
-                    Productos de calidad importados · Entrega en 2 días hábiles
+                    Productos de calidad importados · Entrega solo en Santiago
                   </p>
                   <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                    {["📦 Envío a todo Chile", "🛡️ Compra segura", "💬 Pedido por WhatsApp"].map((t) => (
+                    {["📦 Entrega en Santiago", "🛡️ Compra segura", "💬 Pedido por WhatsApp"].map((t) => (
                       <span
                         key={t}
                         style={{
@@ -668,10 +668,10 @@
                 }}
               >
                 {[
-                  { icon: "🚚", label: "Envío RM", val: `$${fmt(SHIPPING_RM)}` },
-                  { icon: "📅", label: "Plazo entrega", val: "2 días hábiles" },
+                  { icon: "🚚", label: "Zona de entrega", val: "Solo Santiago" },
+                  { icon: "💳", label: "Santiago", val: "50% abono · saldo contra entrega" },
+                  { icon: "📦", label: "Regiones", val: "Pago completo anticipado · envío a confirmar" },
                   { icon: "💰", label: "Medios de pago", val: "Transferencia / Mercadopago" },
-                  { icon: "📲", label: "Contacto", val: "WhatsApp al presionar 'Pedir'" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
                     <span style={{ fontSize: isMobile ? "18px" : "22px", flexShrink: 0, marginTop: "2px" }}>
@@ -783,7 +783,7 @@
                     { n: "1", t: "Elige tu mochila", d: "Selecciona modelo y color" },
                     { n: "2", t: "Haz tu pedido", d: "Presiona 'Pedir' vía WhatsApp" },
                     { n: "3", t: "Confirma y paga", d: "Transferencia o Mercadopago" },
-                    { n: "4", t: "Recibe en casa", d: "2 días hábiles desde la compra" },
+                    { n: "4", t: "Recibe en casa", d: "Entrega en Santiago · regiones a coordinar" },
                   ].map((s) => (
                     <div key={s.n} style={{ textAlign: "center" }}>
                       <div
